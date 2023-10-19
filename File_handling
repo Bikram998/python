@@ -1,0 +1,87 @@
+# File handling
+# Mode
+# 1. Read 'r' - to read the content of file. Raise Exception if the 
+# file doesn't exist in the dir
+# 2. Append 'a' - to append or add new content in the file after 
+# existing content. Creates New file if the file doesn't exist.
+# 3. Write 'w' - to add content in file. It overrides/removes the 
+# existing contents. Creates New file if the file doesn't exist.
+# 4. Create 'x' - to create new file. Raise Exception if the file
+# already exist.
+
+# Functions
+# read(), open(), close(), readline(), readlines(), write()
+
+# Read Mode 'r'
+file_dir = "D:\Python Asar 2079\Morning\demo.txt"
+file = open(file_dir, 'r')
+print(file.read())
+file.close()
+print("")
+# open() - takes two parameter 1. file dir 2. mode
+# read() - returns whole content of the file
+# close() - closes the opened file
+
+# readline() - return single line at a time
+# we can also pass integer argument in this function
+file_dir = "D:/Python Asar 2079/Morning/demo.txt"
+f = open(file_dir, 'r')
+print(f.readline())
+print(f.readline())
+f.close()
+print("")
+
+file = open(file_dir, 'r')
+print(file.readline(5))
+print(file.readline(10))
+file.close()
+print("")
+
+# readlines() - returns all content's lines in list along with '\n'
+file = open(file_dir, 'r')
+print(file.readlines())
+file.close()
+print("")
+
+# if the file doesn't exist raise Exception
+#file_dir = "D:/Python Asar 2079/Morning/demo_1.txt"
+#file = open(file_dir, 'r')
+#print(file.readlines())
+#file.close()
+#print("")
+
+# Append Mode 'a'
+file_url = "D:/Python Asar 2079/Morning/demo_append.txt"
+
+# if file doesn't exist creates new
+file = open(file_url, 'a')
+file.write("New File Added.")
+file.close()
+# adding content to file
+file = open(file_url, 'a')
+file.write("Appending New Content.")
+file.close()
+print("")
+
+# Write Mode 'w'
+file_url = "D:/Python Asar 2079/Morning/demo_append.txt"
+file = open(file_url, 'w')
+file.write("Write Mode all content replaced.")
+file.close()
+
+# Create Mode 'x'
+file_url = "D:/Python Asar 2079/Morning/demo_create_1.txt"
+file = open(file_url, 'x')
+file.write("Newly created file by create mode.")
+file.close()
+
+# Task
+# Store User list in a user.txt file in multiple lines only put username
+# Ask input from user
+# check if the use already exist in the list or not
+# if exist set message as "Already taken"
+# if not set message as "Registered Successfully" and store username
+# to the list
+
+
+
