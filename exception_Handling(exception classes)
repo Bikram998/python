@@ -1,0 +1,90 @@
+# Exception Handling 
+# Error that might occur due to programatic error, syntax error or human error are exception and the method of handling such errors is known as exceptional handling
+
+# Exception Classes in Python
+# 1. SyntaxError
+# 2. KeyError
+# 3. ValueError
+# 4. NameError
+# 5. SystemExitError
+# 6. IndexError
+# 7. ZeroDivisionError
+# 8. FileNotFoundError
+# 9. OverflowError
+
+
+# syntax 
+# try:
+#    expression
+# except:
+#    message
+
+# try statement:- block of code that might raise exception are placed inside this statement
+# except Statement:- exception raised inside try statement are haldled by this statement
+
+# Basic Example
+print("Basic Example")
+try:
+    Name
+    print("Name: ", Name)
+except:
+    print("Please assign value to variables")
+print("Basic Example")
+print("")
+
+# 2. Specific Exception
+print("Specific Exception")
+try:
+    print(100/0)
+except ZeroDivisionError:
+    print("Cannot divide by Zero")
+except:
+    print("Something went wrong")
+print("")
+
+
+# 3. Specific Exception with their Specific Error Message
+
+print("Specific Exception with their Specific Error Message")
+try:
+    number = int(input("Enter number: "))
+    print("Number:", number)
+except ValueError as error:
+    print("Erro Message:", error)
+except:
+    print("Please enter numeric value only.")
+    print("")
+
+    # 4. Multiple Exception
+
+    print("Multiple Exception")
+    try:
+        ma 
+        print(100/0)
+        item = []
+        item.pop()
+    except(ValueError, ZeroDivisionError,IndexError):
+        print("Variable not defined")
+        print("Cannot be divided by Zero")
+        print("Empty List")
+        print("Empty List")
+    except:
+        print("Something went wrong")
+        print("")
+
+
+# Multiple Exception with specific message
+print("Multiple Exception")
+try:
+    ma 
+    print(100/0)
+    item = []
+    item.pop()
+except(ValueError, ZeroDivisionError,IndexError) as Error:
+    print("Error Message:", Error)
+
+except:
+    print("Something went wrong")
+    print("")
+
+
